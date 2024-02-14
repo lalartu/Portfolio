@@ -7,7 +7,7 @@
 
   let selections = [{ value: '', output: null }];
 
-  function handleOptionKeyPress(event, index) {
+  const handleOptionKeyPress = function (event, index) {
     if (event.key === 'Enter') {
       const optionValue = selections[index].value.trim().toLowerCase();
       processOption(optionValue, index);
