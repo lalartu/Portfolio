@@ -1,52 +1,46 @@
 <script>
-  import ExpansionSquare from '../components/icons/ExpansionSquare.svelte';
-  import Ghost from '../components/icons/Ghost.svelte';
-  import OctoCat from '../components/icons/OctoCat.svelte';
-  import ShrinkingSquare from '../components/icons/ShrinkingSquare.svelte';
-  import WhiteCat from '../components/icons/WhiteCat.svelte';
-  /* import Terminalnputs from '../components/terminalnputs.svelte'; */
-
-  /* expansion of Terminal window */
-  let isExpanded = false;
-  let isSvgExpansionShown = true;
-
-  function toggleExpansion() {
-    isExpanded = !isExpanded;
-    isSvgExpansionShown = !isSvgExpansionShown;
-  }
+  import WhiteCat from '../lib/icons/WhiteCat.svelte';
+  import OctoCat from '../lib/icons/OctoCat.svelte';
+  import ShrinkingSquare from '../lib/icons/ShrinkingSquare.svelte';
+  import ExpansionSquare from '../lib/icons/ExpansionSquare.svelte';
+  import Ghost from '../lib/icons/Ghost.svelte';
 </script>
 
-<!-- background -->
+<!--------------------------------------------------------------- background ---------------------------------------------------------------->
 <div class="w-screen h-screen bg-gradient-to-r from-gradientBg1 to-gradientBg2 flex flex-col items-center justify-center">
-  <div class="relative flex flex-col items-center">
-    <!-- SVG Kitty on the top of terminal-->
-    <div class="absolute -top-7 z-10">
-      <WhiteCat className="w-10 h-auto" />
-    </div>
-    <!-- topbar of terminal -->
-    <nav class={`container ${isExpanded ? 'w-[96%]' : 'w-[700px]'} h-[40px] bg-topbarBg border-x-8 border-t-8 border-topbarBg rounded-t-lg `}>
-      <!-- button to resize terminal -->
-      <div class="flex justify-end gap-2 items-center px-1">
-        <button on:click={toggleExpansion} class="flex items-center justify-center rounded-full border-2 border-accentBlue bg-topbarBlue w-6 h-6 hover:bg-topbarViola">
+  <!------------------------------------------------------------ terminal container ------------------------------------------------------------>
+  <div class="w-[700px] border-8 border-topbarBg rounded-lg bg-topbarBg">
+    <!--------------------------------------------------------- Terminal's TopBar ------------------------------------------------------------->
+    <div class="relative flex flex-col items-center">
+      <!-- SVG Kitty on the top of terminal-->
+      <div class="absolute -top-9">
+        <WhiteCat className="w-10 h-auto" />
+      </div>
+
+      <!-- topbar of terminal -->
+      <div class="w-full h-[40px] border-topbarBg flex justify-end items-center -mt-2 gap-3 pr-2">
+        <!-- button to resize terminal -->
+
+        <button class="flex items-center justify-center rounded-full border-2 border-accentBlue bg-topbarBlue w-6 h-6 hover:bg-topbarViola">
           <ExpansionSquare className="w-3 h-3 text-terminalBg" />
 
           <ShrinkingSquare className="hidden w-6 h-6 text-terminalBg" />
         </button>
-        <button class="flex items-center justify-center rounded-full bg-topbarOrange border-2 border-accentOrange w-6 h-6 hover:bg-topbarGreen">
+        <button class="flex items-center justify-center rounded-full box-border bg-topbarOrange border-2 border-accentOrange w-6 h-6 hover:bg-topbarGreen">
           <OctoCat className="w-4 h-4 text-terminalBg" />
         </button>
       </div>
-    </nav>
-  </div>
+    </div>
 
-  <!-- terminal itself -->
-  <div class={`container ${isExpanded ? 'w-[96%] h-[90%]' : 'w-[700px] h-[500px]'} bg-terminalBg border-x-8 border-b-8 border-topbarBg rounded-b-lg`}>
-    <div class="flex gap-2 items-center justify-start m-2">
-      <Ghost className="w-6 h-6" />
-      <span class="text-topbarViola font-bold text-xl">~</span>
-    
-    <!-- <Terminalnputs /> -->
-      <input class="option-input" type="text" />
-	</div>
+    <!-- terminal-area itself -->
+    <div class="w-full h-[500px] bg-terminalBg pt-2">
+      <div class="flex gap-2 items-center justify-start">
+        <Ghost className="w-6 h-6" />
+        <span class="text-topbarViola font-bold text-xl">~</span>
+
+        <!-- Terminal inputs area -->
+        <input class="option-input" type="text" />
+      </div>
+    </div>
   </div>
 </div>
