@@ -15,6 +15,10 @@ export default {
         'accentOrange': '#dd7878',
         'topbarGreen' : '#b3e1a3',
 
+      },
+      fontFamily: {
+        BigBlueTermMono: ['BigBlueTermMonoRegular'],
+        ProFontIIxNerdFontRegular: ['ProFontIIxNerdFontRegular']
       }
     }
   },

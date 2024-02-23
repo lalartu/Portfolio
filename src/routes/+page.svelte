@@ -5,6 +5,7 @@
   import ShrinkingSquare from '../lib/icons/ShrinkingSquare.svelte';
   import ExpansionSquare from '../lib/icons/ExpansionSquare.svelte';
   import Ghost from '../lib/icons/Ghost.svelte';
+  import TerminalEmulation from '../lib/terminalEmulation.svelte';
 
   /* expansion of Terminal window */
   let isExpanded = false;
@@ -50,13 +51,14 @@
 
     <!-- terminal-area itself -->
     <div class="w-full flex-1 bg-terminalBg pt-2">
-      <div class="flex gap-2 items-center justify-start">
+<!--       <div class="flex gap-2 items-center justify-start">
         <Ghost className="w-6 h-6" />
         <span class="text-topbarViola font-bold text-xl">~</span>
 
-        <!-- Terminal inputs area -->
+
         <input class="option-input" type="text" />
-      </div>
+      </div> -->
+      <TerminalEmulation />
     </div>
   </div>
 </div>
