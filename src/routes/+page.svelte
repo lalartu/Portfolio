@@ -50,14 +50,7 @@
     </div>
 
     <!-- terminal-area itself -->
-    <div class="w-full flex-1 bg-terminalBg pt-2">
-<!--       <div class="flex gap-2 items-center justify-start">
-        <Ghost className="w-6 h-6" />
-        <span class="text-topbarViola font-bold text-xl">~</span>
-
-
-        <input class="option-input" type="text" />
-      </div> -->
+    <div class="w-full flex-1 bg-terminalBg pt-2 overflow-y-scroll scrollbar">
       <TerminalEmulation />
     </div>
   </div>
