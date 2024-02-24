@@ -14,7 +14,7 @@
 
   //function that processes a command entered by user
   const processCommand = (index) => {
-    //makes terminal inouts case insensetive
+    //makes terminal inputs case insensetive
     const inputCommand = prompts[index].input.trim().toLowerCase();
     //variable that holds an output Component
     let outputComponent;
@@ -41,7 +41,7 @@
       prompts = [...prompts, { input: '', output: null }];
     }
   };
-  //fucntion that reinitializes the array that holds prompts - clearing terminal area
+  //function that re-initializes the array that holds prompts - clearing terminal area
   const clearEverything = () => {
     prompts = [{ input: '', output: null }];
   };
@@ -89,7 +89,7 @@
       moveCursor = true;
     }
 
-    // when coursour should be moved (true) then:
+    // when cursor should be moved (true) then:
     if (moveCursor) {
       //trigger cursor movement after a slight delay to ensure the DOM has time to update
       setTimeout(() => {
