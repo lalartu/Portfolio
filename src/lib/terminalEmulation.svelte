@@ -118,9 +118,9 @@
   For each prompt object in the array, it first renders an input field. 
   This is where the user types their command. -->
   {#each prompts as prompt, index (index)}
-    <div class="flex gap-2 items-center justify-start font-ProFontIIxNerdFontRegular text-white">
+    <div class="flex gap-2 items-center justify-start font-ProFontIIxNerdFontRegular text-white py-2 ">
       <Ghost className="w-6 h-6" />
-      <span class="text-topbarViola font-bold">&#8594;</span>
+      <h1 class="text-topbarViola text-sm font-bold"> <pre>-></pre> </h1>
       <input class="command-input border-0 outline-0 bg-terminalBg text-sm" type="text" bind:value={prompt.input} on:keydown={(event) => handleInput(event, index)} />
     </div>
     <!--checks if there's an output associated with the current prompt. 

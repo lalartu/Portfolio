@@ -9,6 +9,28 @@
       }
   }
 
+  @layer utilities {
+    .scrollbar::-webkit-scrollbar {
+      width: 7px;
+      height:5px;
+    }
+  
+    .scrollbar::-webkit-scrollbar-track {
+      border-radius: 100vh;
+      background: #22202c;
+    }
+  
+    .scrollbar::-webkit-scrollbar-thumb {
+      background:  #AEA79F;
+      border-radius: 100vh;
+      border: 3px solid  #AEA79F;
+    }
+  
+    .scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #c0a0b9;
+    }
+  }    
+
 *:focus, input {
   outline: none !important;
   box-shadow: none !important;
@@ -16,3 +38,13 @@
   margin: 0 !important;
   background-color: transparent ;
 }
+
+.neon-text {
+  color: #ffffff; /* Bright neon green text */
+  text-shadow:
+    0 0 5px #a4b9ef,
+    0 0 10px #a4b9ef; /* Glowing effect */
+}
+
+
+/* https://necolas.github.io/normalize.css/8.0.1/normalize.css */

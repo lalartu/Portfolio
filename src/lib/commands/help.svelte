@@ -1,4 +1,9 @@
-<div>
-    *help message* <br>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit sapiente vero assumenda aspernatur deserunt distinctio, voluptatibus eos inventore dolorem delectus, voluptates saepe corrupti a, ullam quibusdam explicabo reprehenderit sint pariatur!
-</div>
+<div class="font-ProFontIIxNerdFontRegular text-white">
+    <span class="whitespace-pre indent-0"
+      >Type <span class="neon-text">whoareyou</span> to see who created this site</span
+    ><br />
+  <!--   <span class="whitespace-pre indent-0">Type <i>cv -hobbies</span> to see my hobbies</span><br
+    /> -->
+    <span class="whitespace-pre indent-0">Type <span class="neon-text">clear</span> to clear the terminal</span><br
+    />
+  </div>
