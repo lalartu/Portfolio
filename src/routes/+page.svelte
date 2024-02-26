@@ -6,6 +6,7 @@
   import ExpansionSquare from '../lib/icons/ExpansionSquare.svelte';
   import TerminalEmulation from '../lib/terminalEmulation.svelte';
   import About from '../lib/about.svelte';
+  import MobileVersion from '../lib/mobileVersion.svelte';
 
   /* expansion of Terminal window */
   let isExpanded = false;
@@ -18,15 +19,15 @@
 <!--------------------------------------------------------------- background ---------------------------------------------------------------->
 <div class="w-screen h-screen bg-gradient-to-r from-gradientBg1 to-gradientBg2 flex flex-col items-center justify-center">
   <!------------------------------------------------------------ terminal container ------------------------------------------------------------>
-  <div class={`${isExpanded ? 'w-[96%] h-[90%]' : 'w-[700px] h-[500px] lg:w-[800px] lg:h-[600px]'} flex flex-col border-8 border-topbarBg rounded-lg bg-topbarBg`}>
+  <div class={`${isExpanded ? 'w-[96%] h-[90%]' : 'w-[96%] h-[90%] md:w-[700px] md:h-[500px] lg:w-[800px] lg:h-[600px]'} flex flex-col border-8 border-topbarBg rounded-lg bg-topbarBg`}>
     <!--------------------------------------------------------- Terminal's TopBar ------------------------------------------------------------->
     <div class="relative flex flex-col items-center">
       <!-- SVG Kitty on the top of terminal-->
-      <div class={`${isExpanded ? 'hidden' : 'block'} absolute -top-9`}>
+      <div class={`${isExpanded ? 'hidden' : 'hidden md:block'} absolute -top-9`}>
         <WhiteCat className="w-10 h-auto" />
       </div>
 
-      <div class={`${isExpanded ? 'block' : 'hidden'} absolute -top-14`}>
+      <div class={`${isExpanded ? 'hidden md:block' : 'hidden'} absolute -top-14`}>
         <WhiteCatAngry className="w-14 h-auto" />
       </div>
 
@@ -34,7 +35,7 @@
       <div class="w-full border-topbarBg flex justify-end items-center -mt-2 gap-3 pr-2 p-3">
         <!-- button to resize terminal -->
 
-        <button class="flex items-center justify-center rounded-full border-2 border-accentBlue bg-topbarBlue w-6 h-6 hover:bg-topbarViola focus:bg-topbarBlue" on:click={toggleExpansion}>
+        <button class="hidden md:flex items-center justify-center rounded-full border-2 border-accentBlue bg-topbarBlue w-6 h-6 hover:bg-topbarViola focus:bg-topbarBlue" on:click={toggleExpansion}>
           <ExpansionSquare className={`${isExpanded ? 'hidden' : 'block'} w-3 h-3 text-terminalBg`} />
 
           <ShrinkingSquare className={`${isExpanded ? 'block' : 'hidden'} w-3 h-3 text-terminalBg`} />
@@ -47,7 +48,9 @@
 
     <!-- terminal-area itself -->
     <div class="w-full flex-1 bg-terminalBg pt-2 overflow-y-scroll scrollbar">
+      
       <About />
+      <MobileVersion />
       <TerminalEmulation />
     </div>
   </div>
