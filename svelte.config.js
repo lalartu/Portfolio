@@ -4,8 +4,8 @@ import adapter from '@sveltejs/adapter-static';
 const config = {
   kit: {
     adapter: adapter(
-      {pages: 'netlify',
-      assets: 'netlify',
+      {pages: 'vercel',
+      assets: 'vercel',
       fallback: undefined,
       precompress: false,
       strict:true}

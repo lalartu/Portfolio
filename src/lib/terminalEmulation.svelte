@@ -4,6 +4,21 @@
   import Help from './commands/help.svelte';
   import Error from './commands/error.svelte';
   import Whoareyou from './commands/whoareyou.svelte';
+  import Novelli from './commands/novelli.svelte';
+  import Cv from './commands/cv.svelte';
+  import Typescript from './commands/typescript.svelte';
+  import Javascript from './commands/javascript.svelte';
+  import C from './commands/c.svelte';
+  import Asm from './commands/asm.svelte';
+  import Csharp from './commands/csharp.svelte';
+  import Sql from './commands/sql.svelte';
+  import Docker from './commands/docker.svelte';
+  import Python from './commands/python.svelte';
+  import Rust from './commands/rust.svelte';
+  import Golang from './commands/golang.svelte';
+  import Grpc from './commands/grpc.svelte';
+  import Graphql from './commands/graphql.svelte';
+  import Credits from './commands/credits.svelte';
   import Ghost from './icons/Ghost.svelte';
   //this array is to store the prompt objects (inputs&outputs)
   let prompts = [{ input: '', output: null }];
@@ -23,8 +38,53 @@
       case 'help':
         outputComponent = Help;
         break;
-      case 'whoareyou':
+      case 'disassemble main':
         outputComponent = Whoareyou;
+        break;
+        case 'disassemble cv':
+        outputComponent = Cv;
+        break;
+        case 'x/s 0x402010':
+        outputComponent = Novelli;
+        break;
+        case 'x/s 0x4020b4':
+        outputComponent = Typescript;
+        break;
+        case 'x/s 0x4020bf':
+        outputComponent = Javascript;
+        break;
+        case 'x/s 0x4020ca':
+        outputComponent = C;
+        break;
+        case 'x/s 0x4020cc':
+        outputComponent = Asm;
+        break;
+        case 'x/s 0x4020d0':
+        outputComponent = Csharp;
+        break;
+        case 'x/s 0x4020d3':
+        outputComponent = Sql;
+        break;
+        case 'x/s 0x4020d7':
+        outputComponent = Docker;
+        break;
+        case 'x/s 0x4020de':
+        outputComponent = Python;
+        break;
+        case 'x/s 0x4020e5':
+        outputComponent = Rust;
+        break;
+        case 'x/s 0x4020ea':
+        outputComponent = Golang;
+        break;
+        case 'x/s 0x4020f1':
+        outputComponent = Grpc;
+        break;
+        case 'x/s 0x4020f6':
+        outputComponent = Graphql;
+        break;
+        case 'credits':
+        outputComponent = Credits;
         break;
       case 'clear':
         clearEverything();
@@ -119,8 +179,7 @@
   This is where the user types their command. -->
   {#each prompts as prompt, index (index)}
     <div class="hidden md:flex gap-2 items-center justify-start font-ProFontIIxNerdFontRegular text-white py-2 ">
-      <Ghost className="w-6 h-6" />
-      <h1 class="text-topbarViola text-sm font-bold"> <pre>-></pre> </h1>
+      <h1 class="text-topbarViola text-sm font-bold"> <pre>(gdb)</pre> </h1>
       <input class="command-input border-0 outline-0 bg-terminalBg text-sm" type="text" bind:value={prompt.input} on:keydown={(event) => handleInput(event, index)} />
     </div>
     <!--checks if there's an output associated with the current prompt. 

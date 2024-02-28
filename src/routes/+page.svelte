@@ -22,14 +22,6 @@
   <div class={`${isExpanded ? 'w-[96%] h-[90%]' : 'w-[96%] h-[90%] md:w-[700px] md:h-[500px] lg:w-[800px] lg:h-[600px]'} flex flex-col border-8 border-topbarBg rounded-lg bg-topbarBg`}>
     <!--------------------------------------------------------- Terminal's TopBar ------------------------------------------------------------->
     <div class="relative flex flex-col items-center">
-      <!-- SVG Kitty on the top of terminal-->
-      <div class={`${isExpanded ? 'hidden' : 'hidden md:block'} absolute -top-9`}>
-        <WhiteCat className="w-10 h-auto" />
-      </div>
-
-      <div class={`${isExpanded ? 'hidden md:block' : 'hidden'} absolute -top-14`}>
-        <WhiteCatAngry className="w-14 h-auto" />
-      </div>
 
       <!-- topbar of terminal -->
       <div class="w-full border-topbarBg flex justify-end items-center -mt-2 gap-3 pr-2 p-3">
@@ -40,7 +32,7 @@
 
           <ShrinkingSquare className={`${isExpanded ? 'block' : 'hidden'} w-3 h-3 text-terminalBg`} />
         </button>
-        <a href="https://github.com/dev-charodeyka" target="_blank" class="flex items-center justify-center rounded-full box-border bg-topbarOrange border-2 border-accentOrange w-6 h-6 hover:bg-topbarGreen">
+        <a href="https://github.com/lalartu" target="_blank" class="flex items-center justify-center rounded-full box-border bg-topbarOrange border-2 border-accentOrange w-6 h-6 hover:bg-topbarGreen">
           <OctoCat className="w-4 h-4 text-terminalBg" />
         </a>
       </div>

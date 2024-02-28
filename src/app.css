@@ -46,5 +46,57 @@
     0 0 10px #a4b9ef; /* Glowing effect */
 }
 
+.catpuccin-text {
+  color: #4068cc; /* Bright neon green text */
+  text-shadow:
+    0 0 5px #4068cc,
+    0 0 10px #4068cc; /* Glowing effect */
+}
+
+.svelte-text {
+  color: #FF0101; /* Bright neon green text */
+  text-shadow:
+    0 0 5px #df6262,
+    0 0 10px #df6262; /* Glowing effect */
+}
+
+.tw-text {
+  color: #38BDF8; /* Bright neon green text */
+  text-shadow:
+    0 0 5px #82d0f2,
+    0 0 10px #82d0f2; /* Glowing effect */
+}
+
+.vite-text {
+  background: linear-gradient(120deg, #bd34fe 30%, #41d1ff);
+  background-clip: border-box;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow:
+    0 0 5px #d08fee,
+    0 0 10px #a2e0f5; /* Glowing effect */
+}
+.catpuccin-light-text {
+  color: #ec9d5d;
+}
+
+.gdb-header-text {
+  color: #513CAA;
+}
+
+.gdb-green-text {
+  color: #1f9b33;
+}
+
+.gdb-red-text {
+  color: #d2130d;
+}
+
+.gdb-address {
+  color: #1D95B8;
+}
+
+
+
 
 /* https://necolas.github.io/normalize.css/8.0.1/normalize.css */

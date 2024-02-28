@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        'gradientBg1' : '#e5939c',
+        'gradientBg1' : '#93c4e5',
         'gradientBg2' : '#eeaad5',
         'terminalBg'  : '#22202c',
         'topbarBg'    : '#f7c196',
