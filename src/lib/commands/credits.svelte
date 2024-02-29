@@ -12,5 +12,10 @@
   <span class="whitespace-pre indent-0">Styled with </span>
   <a class="tw-text" href="https://tailwindcss.com/">Tailwind CSS</a><br>
   <span class="whitespace-pre indent-0">bundled by </span>
-  <a class="vite-text" href="https://vitejs.dev/">Vite</a><br>
+  <a class="vite-text" href="https://vitejs.dev/">Vite</a><br><br>
+
+  <span class="indent-0"
+      >About me:</span
+    ><br /><br>  
+    <a class="nq-text" href="https://blog.neverquest.green/">My blog</a><br><br>
   </div>

@@ -76,6 +76,14 @@
     0 0 5px #d08fee,
     0 0 10px #a2e0f5; /* Glowing effect */
 }
+
+.nq-text {
+  color: #23a671; /* Bright neon green text */
+  text-shadow:
+    0 0 5px #59e1ab,
+    0 0 10px #59e1ab; /* Glowing effect */
+}
+
 .catpuccin-light-text {
   color: #ec9d5d;
 }
